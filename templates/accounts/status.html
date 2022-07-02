@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  {% include 'accounts/cdnlines.html' %}
+  <title>Title</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md">
+            <div class="card text-center">
+                <div class="card-header bg-success text-white">
+                    <h4>Total Orders</h4>
+                </div>
+                <div class="card-body">
+                    <h1>{{ total_orders }}</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <div class="card text-center">
+                <div class="card-header bg-danger text-white">
+                    <h4>Pending Orders</h4>
+                </div>
+                <div class="card-body">
+                    <h1>{{ pending_orders }}</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <div class="card text-center">
+                <div class="card-header bg-primary text-white">
+                    <h4>Delivered Orders</h4>
+                </div>
+                <div class="card-body">
+                    <h1>{{ delivered_orders }}</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md">
+        <div class="card text-center">
+            <div class="card-header bg-dark text-white">
+                <h4>OutForDelivery</h4>
+            </div>
+            <div class="card-body">
+                <h1>{{ outfordelivery_orders }}</h1>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

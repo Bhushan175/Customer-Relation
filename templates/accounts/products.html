@@ -1,0 +1,42 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-success text-white text-center">
+                    <h4>All Available Products</h4>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered text-center table-hover">
+                        <thead class="bg-warning">
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Product Price</th>
+                                <th>Order Date</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for product in products %}
+                                <tr>
+                                    <td>{{ product.name }}</td>
+                                    <td>{{ product.price }}</td>
+                                    <td>{{ product.order_date }}</td>
+                                    <td>{{ product.category }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
